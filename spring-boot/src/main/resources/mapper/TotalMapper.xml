@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 映射器的配置 -->
+<mapper namespace="com.example.springboot.mapper.TotalMapper">
+<resultMap type="TotalEntity" id="TotalEntity">
+		<id column="app_id"  property="appId" />
+		<result column="app_name"  property="appName" />
+		<result column="download_time" property="downloadTime" />
+		<result column="download_num"  property="downloadNum" />
+		<result column="good"  property="good" />
+		<result column="comment_number"  property="commentNumber" />
+		<result column="tag"  property="tag" />
+		<result column="classific"  property="classific" />
+		<result column="comment_detail"  property="commentDetail" />
+
+</resultMap>
+
+<select id="getTotal" resultType="list" >
+	select tag from total
+</select>
+	
+<!--<select id="getById" parameterType="int">-->
+	<!--select  * from  where id=#{}-->
+<!--</select>-->
+
+
+</mapper>
